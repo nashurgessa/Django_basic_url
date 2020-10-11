@@ -6,4 +6,5 @@ from django.http import HttpResponse
 # takes => HttpRequest
 # return => HttpResponse
 def index(request):
-    return HttpResponse("Rango Says hey there partner")
+    context_dict = {'boldmessage': "Crunchy, creamy, cookie, candy, cupcake"}
+    return render(request, 'rango/index.html', context=context_dict)
